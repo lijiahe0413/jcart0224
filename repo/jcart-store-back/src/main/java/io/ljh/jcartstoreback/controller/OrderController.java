@@ -1,7 +1,6 @@
 package io.ljh.jcartstoreback.controller;
 
-import io.ljh.jcartstoreback.dto.out.OrderListOutDTO;
-import io.ljh.jcartstoreback.dto.out.PageOutDTO;
+import io.ljh.jcartstoreback.dto.out.*;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -20,17 +19,17 @@ public class OrderController {
     }
 
     @GetMapping("/getById")
-    public OrderListOutDTO getById(@RequestParam Integer order_id){
+    public OrderShowOutDTO getById(@RequestParam Integer order_id){
         return null;
     }
 
-    @GetMapping("/getByCustomersId")
-    public OrderListOutDTO getByCustomersId(@RequestParam Integer customers_id){
+    @GetMapping("/getInvoice")
+    public OrderInvoiceShowOutDTO getByCustomersId(@RequestParam Long orderId){
         return null;
     }
 
     @PostMapping("/create")
-    public OrderListOutDTO create(@RequestBody OrderListOutDTO orderListOutDTO){
+    public OrderShipShowOutDTO create(@RequestBody OrderListOutDTO orderListOutDTO){
         return null;
     }
 
