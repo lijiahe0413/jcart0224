@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1af30cca-f16a-4caa-8b0c-ff64eb3392c4" name="Default Changelist" comment="" />
+    <list default="true" id="1af30cca-f16a-4caa-8b0c-ff64eb3392c4" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../jcart-administratio-back/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jcart-administratio-back/.mvn/wrapper/MavenWrapperDownloader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jcart-administratio-back/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jcart-administratio-back/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jcart-administratio-back/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jcart-administratio-back/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jcart-administratio-back/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jcart-administratio-back/src/main/java/io/ljh/jcartadministratioback/JcartAdministratioBackApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jcart-administratio-back/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jcart-administratio-back/src/test/java/io/ljh/jcartadministratioback/JcartAdministratioBackApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +48,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="http.proxy" />
   </component>
   <component name="RunDashboard">
@@ -117,6 +130,7 @@
       <option name="presentableId" value="Default" />
       <updated>1582541456498</updated>
       <workItem from="1582541457720" duration="190000" />
+      <workItem from="1582701350321" duration="236000" />
     </task>
     <servers />
   </component>
@@ -128,7 +142,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

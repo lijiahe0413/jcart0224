@@ -1,18 +1,27 @@
-package io.ljh.jcartstoreback.dto.out;
+package io.ljh.jcartstoreback.po;
 
-import java.util.List;
-
-public class ProductShowOutDTO {
+public class Product {
     private Integer productId;
+
     private String productCode;
+
     private String productName;
+
+    private String productAbstract;
+
     private Double price;
+
     private Double discount;
+
     private Integer stockQuantity;
+
+    private Byte status;
+
     private String mainPicUrl;
+
     private Integer rewordPoints;
-    private String description;
-    private List<String> otherPicUrls;
+
+    private Integer sortOrder;
 
     public Integer getProductId() {
         return productId;
@@ -27,7 +36,7 @@ public class ProductShowOutDTO {
     }
 
     public void setProductCode(String productCode) {
-        this.productCode = productCode;
+        this.productCode = productCode == null ? null : productCode.trim();
     }
 
     public String getProductName() {
@@ -35,7 +44,15 @@ public class ProductShowOutDTO {
     }
 
     public void setProductName(String productName) {
-        this.productName = productName;
+        this.productName = productName == null ? null : productName.trim();
+    }
+
+    public String getProductAbstract() {
+        return productAbstract;
+    }
+
+    public void setProductAbstract(String productAbstract) {
+        this.productAbstract = productAbstract == null ? null : productAbstract.trim();
     }
 
     public Double getPrice() {
@@ -62,12 +79,20 @@ public class ProductShowOutDTO {
         this.stockQuantity = stockQuantity;
     }
 
+    public Byte getStatus() {
+        return status;
+    }
+
+    public void setStatus(Byte status) {
+        this.status = status;
+    }
+
     public String getMainPicUrl() {
         return mainPicUrl;
     }
 
     public void setMainPicUrl(String mainPicUrl) {
-        this.mainPicUrl = mainPicUrl;
+        this.mainPicUrl = mainPicUrl == null ? null : mainPicUrl.trim();
     }
 
     public Integer getRewordPoints() {
@@ -78,19 +103,11 @@ public class ProductShowOutDTO {
         this.rewordPoints = rewordPoints;
     }
 
-    public String getDescription() {
-        return description;
+    public Integer getSortOrder() {
+        return sortOrder;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public List<String> getOtherPicUrls() {
-        return otherPicUrls;
-    }
-
-    public void setOtherPicUrls(List<String> otherPicUrls) {
-        this.otherPicUrls = otherPicUrls;
+    public void setSortOrder(Integer sortOrder) {
+        this.sortOrder = sortOrder;
     }
 }
