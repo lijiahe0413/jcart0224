@@ -2,14 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8af12a4f-dce6-4642-9eef-10c3e1f206f7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/ljh/jcartadministrationback/dto/out/AdministratorLoginOutDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/ljh/jcartadministrationback/service/AdministratorService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/ljh/jcartadministrationback/util/JWTUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/ljh/jcartadministrationback/vo/AdministratorLoginVO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/ljh/jcartadministrationback/enumeration/AdministratorStatus.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/ljh/jcartadministrationback/constant/ClientExceptionConstant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/ljh/jcartadministrationback/constant/ClientExceptionConstant.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/io/ljh/jcartadministrationback/controller/AdministratorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/ljh/jcartadministrationback/controller/AdministratorController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/ljh/jcartadministrationback/dto/in/AdministratorUpdateInDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/ljh/jcartadministrationback/dto/in/AdministratorUpdateInDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/ljh/jcartadministrationback/dto/out/AdministratorListOutDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/ljh/jcartadministrationback/dto/out/AdministratorListOutDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/ljh/jcartadministrationback/dto/out/AdministratorShowOutDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/ljh/jcartadministrationback/dto/out/AdministratorShowOutDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/ljh/jcartadministrationback/service/AdministratorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/ljh/jcartadministrationback/service/AdministratorService.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -89,6 +88,8 @@
       <workItem from="1582810389527" duration="13000" />
       <workItem from="1583038989529" duration="586000" />
       <workItem from="1583058679371" duration="2318000" />
+      <workItem from="1583152897558" duration="728000" />
+      <workItem from="1583227267103" duration="7000" />
     </task>
     <servers />
   </component>
