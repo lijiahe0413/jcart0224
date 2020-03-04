@@ -4,10 +4,10 @@ public class ProductListOutDTO {
     private Integer productId;
     private String productCode;
     private String productName;
+    private String productAbstract;
     private Double price;
     private Double discount;
-    private Integer quantity;
-    private Byte status;
+    private String mainPicUrl;
 
     public Integer getProductId() {
         return productId;
@@ -33,6 +33,14 @@ public class ProductListOutDTO {
         this.productName = productName;
     }
 
+    public String getProductAbstract() {
+        return productAbstract;
+    }
+
+    public void setProductAbstract(String productAbstract) {
+        this.productAbstract = productAbstract;
+    }
+
     public Double getPrice() {
         return price;
     }
@@ -49,19 +57,11 @@ public class ProductListOutDTO {
         this.discount = discount;
     }
 
-    public Integer getQuantity() {
-        return quantity;
+    public String getMainPicUrl() {
+        return mainPicUrl;
     }
 
-    public void setQuantity(Integer quantity) {
-        this.quantity = quantity;
-    }
-
-    public Byte getStatus() {
-        return status;
-    }
-
-    public void setStatus(Byte status) {
-        this.status = status;
+    public void setMainPicUrl(String mainPicUrl) {
+        this.mainPicUrl = mainPicUrl;
     }
 }

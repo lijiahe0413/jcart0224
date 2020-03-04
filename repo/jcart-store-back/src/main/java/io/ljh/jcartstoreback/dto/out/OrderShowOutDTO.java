@@ -4,7 +4,6 @@ import java.util.List;
 
 public class OrderShowOutDTO {
     private Long orderId;
-    private Integer customerId;
     private Byte status;
     private Double totalPrice;
     private Integer rewordPoints;
@@ -17,7 +16,7 @@ public class OrderShowOutDTO {
     private String invoiceAddress;
     private Double invoicePrice;
     private String comment;
-    private List<OrderProductShowOutDTO> orderProducts;
+    private List<OrderProductOutDTO> orderProducts;
 
     public Long getOrderId() {
         return orderId;
@@ -25,14 +24,6 @@ public class OrderShowOutDTO {
 
     public void setOrderId(Long orderId) {
         this.orderId = orderId;
-    }
-
-    public Integer getCustomerId() {
-        return customerId;
-    }
-
-    public void setCustomerId(Integer customerId) {
-        this.customerId = customerId;
     }
 
     public Byte getStatus() {
@@ -131,11 +122,11 @@ public class OrderShowOutDTO {
         this.comment = comment;
     }
 
-    public List<OrderProductShowOutDTO> getOrderProducts() {
+    public List<OrderProductOutDTO> getOrderProducts() {
         return orderProducts;
     }
 
-    public void setOrderProducts(List<OrderProductShowOutDTO> orderProducts) {
+    public void setOrderProducts(List<OrderProductOutDTO> orderProducts) {
         this.orderProducts = orderProducts;
     }
 }

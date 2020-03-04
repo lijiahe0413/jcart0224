@@ -1,7 +1,9 @@
 package io.ljh.jcartstoreback.dao;
 
 import io.ljh.jcartstoreback.po.Administrator;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public interface AdministratorMapper {
     int deleteByPrimaryKey(Integer administratorId);
 

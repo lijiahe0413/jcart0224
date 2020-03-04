@@ -13,7 +13,9 @@ import java.util.List;
 public class AddressController {
 
     @GetMapping("/getListByCustomerId")
-    public List<AddressListOutDTO> getListByCustomerId(@RequestParam Integer customerId){
+    public List<AddressListOutDTO> getListByCustomerId(
+            @RequestParam Integer customerId
+    ){
         return null;
     }
 

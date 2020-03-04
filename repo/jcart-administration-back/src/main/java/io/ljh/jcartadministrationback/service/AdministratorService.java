@@ -7,19 +7,19 @@ import java.util.List;
 
 public interface AdministratorService {
 
-    Administrator getById(Integer administratorId);
-
     Administrator getByUsername(String username);
 
-    Integer create(Administrator administrator);
+    Administrator getById(Integer administratorId);
 
     void update(Administrator administrator);
 
-    void delete(Integer administratorId);
-
-    void batchDelete(List<Integer> administratorIds);
-
     Page<Administrator> getList(Integer pageNum);
 
+    Integer create(Administrator administrator);
+
+    void delete(Integer adminstratorId);
+
+    void batchDelete(List<Integer> administratorIds);
 }
+
 

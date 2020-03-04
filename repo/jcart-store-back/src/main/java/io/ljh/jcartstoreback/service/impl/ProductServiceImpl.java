@@ -1,8 +1,11 @@
 package io.ljh.jcartstoreback.service.impl;
 
 import com.alibaba.fastjson.JSON;
+import com.github.pagehelper.Page;
+import com.github.pagehelper.PageHelper;
 import io.ljh.jcartstoreback.dao.ProductDetailMapper;
 import io.ljh.jcartstoreback.dao.ProductMapper;
+import io.ljh.jcartstoreback.dto.out.ProductListOutDTO;
 import io.ljh.jcartstoreback.dto.out.ProductShowOutDTO;
 import io.ljh.jcartstoreback.po.Product;
 import io.ljh.jcartstoreback.po.ProductDetail;
@@ -21,8 +24,22 @@ public class ProductServiceImpl implements ProductService {
     @Autowired
     private ProductDetailMapper productDetailMapper;
 
+
     @Override
-    public ProductShowOutDTO getById(Integer productId) {
+    public Page<ProductListOutDTO> search(Integer pageNum) {
+        PageHelper.startPage(pageNum,10);
+        Page<ProductListOutDTO> productListOutDTOS = productMapper.search();
+        return productListOutDTOS;
+    }
+
+    @Override
+    public Product getById(Integer productId) {
+        Product product = productMapper.selectByPrimaryKey(productId);
+        return product;
+    }
+
+    @Override
+    public ProductShowOutDTO getShowById(Integer productId) {
 
         Product product = productMapper.selectByPrimaryKey(productId);
         ProductDetail productDetail = productDetailMapper.selectByPrimaryKey(productId);

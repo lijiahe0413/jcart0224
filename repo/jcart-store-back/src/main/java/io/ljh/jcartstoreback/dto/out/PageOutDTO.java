@@ -3,25 +3,17 @@ package io.ljh.jcartstoreback.dto.out;
 import java.util.List;
 
 public class PageOutDTO<T> {
-    private Integer total;
-    private Integer pageNum;
+    private Long total;
     private Integer pageSize;
+    private Integer pageNum;
     private List<T> list;
 
-    public Integer getTotal() {
+    public Long getTotal() {
         return total;
     }
 
-    public void setTotal(Integer total) {
+    public void setTotal(Long total) {
         this.total = total;
-    }
-
-    public Integer getPageNum() {
-        return pageNum;
-    }
-
-    public void setPageNum(Integer pageNum) {
-        this.pageNum = pageNum;
     }
 
     public Integer getPageSize() {
@@ -30,6 +22,14 @@ public class PageOutDTO<T> {
 
     public void setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
+    }
+
+    public Integer getPageNum() {
+        return pageNum;
+    }
+
+    public void setPageNum(Integer pageNum) {
+        this.pageNum = pageNum;
     }
 
     public List<T> getList() {
