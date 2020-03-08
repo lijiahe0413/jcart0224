@@ -13,6 +13,7 @@ import java.util.UUID;
 
 @RestController
 @RequestMapping("/image")
+@CrossOrigin
 public class ImageController {
 
     private List<String> imageExts= Arrays.asList("jpg","jpeg","png");
@@ -23,7 +24,6 @@ public class ImageController {
         String[] splits = originalFilename.split("\\.");
         String ext = splits[splits.length - 1];
         ext = ext.toLowerCase();
-        //todo judge with content type
         boolean contains = imageExts.contains(ext);
         if (!contains){
             throw new ClientException(ClientExceptionConstant.IMAGE_INVALID_ERRCODE, ClientExceptionConstant.IMAGE_INVALID_ERRMSG);
