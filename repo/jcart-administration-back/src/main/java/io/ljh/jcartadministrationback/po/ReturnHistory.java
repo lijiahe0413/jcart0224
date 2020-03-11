@@ -15,7 +15,7 @@ public class ReturnHistory {
 
     private Boolean customerNotified;
 
-    public Integer getReturnHistoryId() {
+    public Long getReturnHistoryId() {
         return returnHistoryId;
     }
 

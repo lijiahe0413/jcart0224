@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="io.ljh.jcartadministrationback.dao.CustomerMapper">
+<mapper namespace="io.cjf.jcartadministrationback.dao.CustomerMapper">
   <resultMap id="BaseResultMap" type="io.ljh.jcartadministrationback.po.Customer">
     <id column="customer_id" jdbcType="INTEGER" property="customerId" />
     <result column="username" jdbcType="VARCHAR" property="username" />
@@ -18,11 +18,11 @@
     <result column="default_address_id" jdbcType="INTEGER" property="defaultAddressId" />
   </resultMap>
   <sql id="Base_Column_List">
-    customer_id, username, real_name, avatar_url, encrypted_password, mobile, mobile_verified, 
+    customer_id, username, real_name, avatar_url, encrypted_password, mobile, mobile_verified,
     email, email_verified, status, create_time, news_subscribed, reword_points, default_address_id
   </sql>
   <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
-    select 
+    select
     <include refid="Base_Column_List" />
     from jcart_customer
     where customer_id = #{customerId,jdbcType=INTEGER}
@@ -31,19 +31,19 @@
     delete from jcart_customer
     where customer_id = #{customerId,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" parameterType="io.ljh.jcartadministrationback.po.Customer">
-    insert into jcart_customer (customer_id, username, real_name, 
-      avatar_url, encrypted_password, mobile, 
-      mobile_verified, email, email_verified, 
-      status, create_time, news_subscribed, 
+  <insert id="insert" parameterType="io.cjf.jcartadministrationback.po.Customer">
+    insert into jcart_customer (customer_id, username, real_name,
+      avatar_url, encrypted_password, mobile,
+      mobile_verified, email, email_verified,
+      status, create_time, news_subscribed,
       reword_points, default_address_id)
-    values (#{customerId,jdbcType=INTEGER}, #{username,jdbcType=VARCHAR}, #{realName,jdbcType=VARCHAR}, 
-      #{avatarUrl,jdbcType=VARCHAR}, #{encryptedPassword,jdbcType=VARCHAR}, #{mobile,jdbcType=VARCHAR}, 
-      #{mobileVerified,jdbcType=BIT}, #{email,jdbcType=VARCHAR}, #{emailVerified,jdbcType=BIT}, 
-      #{status,jdbcType=TINYINT}, #{createTime,jdbcType=TIMESTAMP}, #{newsSubscribed,jdbcType=BIT}, 
+    values (#{customerId,jdbcType=INTEGER}, #{username,jdbcType=VARCHAR}, #{realName,jdbcType=VARCHAR},
+      #{avatarUrl,jdbcType=VARCHAR}, #{encryptedPassword,jdbcType=VARCHAR}, #{mobile,jdbcType=VARCHAR},
+      #{mobileVerified,jdbcType=BIT}, #{email,jdbcType=VARCHAR}, #{emailVerified,jdbcType=BIT},
+      #{status,jdbcType=TINYINT}, #{createTime,jdbcType=TIMESTAMP}, #{newsSubscribed,jdbcType=BIT},
       #{rewordPoints,jdbcType=INTEGER}, #{defaultAddressId,jdbcType=INTEGER})
   </insert>
-  <insert id="insertSelective" parameterType="io.ljh.jcartadministrationback.po.Customer">
+  <insert id="insertSelective" parameterType="io.cjf.jcartadministrationback.po.Customer">
     insert into jcart_customer
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="customerId != null">
@@ -134,7 +134,7 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="io.ljh.jcartadministrationback.po.Customer">
+  <update id="updateByPrimaryKeySelective" parameterType="io.cjf.jcartadministrationback.po.Customer">
     update jcart_customer
     <set>
       <if test="username != null">
@@ -179,7 +179,7 @@
     </set>
     where customer_id = #{customerId,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="io.ljh.jcartadministrationback.po.Customer">
+  <update id="updateByPrimaryKey" parameterType="io.cjf.jcartadministrationback.po.Customer">
     update jcart_customer
     set username = #{username,jdbcType=VARCHAR},
       real_name = #{realName,jdbcType=VARCHAR},
@@ -196,4 +196,29 @@
       default_address_id = #{defaultAddressId,jdbcType=INTEGER}
     where customer_id = #{customerId,jdbcType=INTEGER}
   </update>
+
+  <!--  custom-->
+  <select id="search" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from jcart_customer
+    <where>
+      <if test="username != null and username != ''">
+        username = #{username}
+      </if>
+      <if test="mobile != null and mobile != ''">
+        AND mobile = #{mobile}
+      </if>
+      <if test="email != null and email != ''">
+        AND email = #{email}
+      </if>
+      <if test="status != null">
+        AND status = #{status}
+      </if>
+      <if test="realName != null and realName != ''">
+        AND real_name like concat('%',#{realName},'%')
+      </if>
+    </where>
+  </select>
+
 </mapper>
